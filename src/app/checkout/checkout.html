@@ -1,1 +1,25 @@
-<p>checkout works!</p>
+<section class="checkout-page">
+    <h1>Checkout 🐾</h1>
+  
+    <div *ngIf="cartItems.length === 0" class="empty-checkout">
+      <p>Your cart is empty.</p>
+      <a routerLink="/products" class="browse-btn">
+        Browse Products
+      </a>
+    </div>
+  
+    <div *ngIf="cartItems.length > 0">
+      <div class="checkout-item" *ngFor="let item of cartItems">
+        <span>{{ item.name }}</span>
+        <span>₱{{ item.price }}</span>
+      </div>
+  
+      <div class="checkout-total">
+        <h2>Total: ₱{{ total }}</h2>
+      </div>
+  
+      <button class="place-order-btn" (click)="placeOrder()">
+        Place Order
+      </button>
+    </div>
+  </section>
