@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { PetShopService } from '../services/pet-shop.service';
+import { PetShopService } from '../pet-shop.service';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.css']
+  templateUrl: './checkout.html',
+  styleUrls: ['./checkout.css']
 })
 export class CheckoutComponent {
   constructor(public petShopService: PetShopService) {}

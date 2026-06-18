@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { PetShopService } from '../services/pet-shop.service';
+import { PetShopService } from '../pet-shop.service';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  templateUrl: './cart.html',
+  styleUrls: ['./cart.css']
 })
 export class CartComponent {
   constructor(public petShopService: PetShopService) {}
