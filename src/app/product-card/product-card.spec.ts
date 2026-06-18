@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+pimport { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductCard } from './product-card';
 

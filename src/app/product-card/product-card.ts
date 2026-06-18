@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PetShop } from '../pet-shop.service';
+import { PetShopService } from '../pet-shop.service';
 
 @Component({
   selector: 'app-product-card',
@@ -12,7 +12,7 @@ import { PetShop } from '../pet-shop.service';
 export class ProductCardComponent {
   @Input() product: any;
 
-  constructor(private petShopService: PetShop) {}
+  constructor(private petShopService: PetShopService) {}
 
   addToCart(): void {
     this.petShopService.addToCart(this.product);
