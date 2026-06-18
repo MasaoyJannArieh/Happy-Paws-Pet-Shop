@@ -1,74 +1,41 @@
 .hero {
-    background: linear-gradient(135deg, #4caf50, #81c784);
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
     color: white;
+    padding: 90px 20px;
     text-align: center;
-    padding: 80px 20px;
-  }
-  
-  .hero-content {
-    max-width: 700px;
-    margin: auto;
+    border-radius: 0 0 30px 30px;
   }
   
   .hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    font-size: 40px;
+    margin-bottom: 10px;
   }
   
   .shop-btn {
-    display: inline-block;
-    background-color: white;
-    color: #4caf50;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
+    background: white;
+    color: #a18cd1;
+    padding: 12px 22px;
+    border-radius: 25px;
     font-weight: bold;
+    display: inline-block;
     transition: 0.3s;
   }
   
   .shop-btn:hover {
-    transform: translateY(-2px);
+    transform: scale(1.05);
   }
   
   .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 50px 20px;
+    padding: 40px;
   }
   
   .feature-card {
-    background: #f5f5f5;
-    border-radius: 12px;
+    background: white;
     padding: 20px;
-    width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .feature-card h2 {
-    margin-bottom: 10px;
-  }
-  
-  .about-preview {
-    max-width: 800px;
-    margin: 0 auto 50px;
-    text-align: center;
-    padding: 0 20px;
-  }
-  
-  .about-preview h2 {
-    color: #4ead52;
-    margin-bottom: 15px;
-  }
-  
-  .about-preview p {
-    line-height: 1.7;
   }
