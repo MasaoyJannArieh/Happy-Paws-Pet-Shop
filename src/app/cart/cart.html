@@ -1,1 +1,34 @@
-<p>cart works!</p>
+<section class="cart-page">
+    <h1>Shopping Cart 🛒</h1>
+  
+    <div *ngIf="cartItems.length === 0" class="empty-cart">
+      <p>Your cart is currently empty.</p>
+      <a routerLink="/products" class="shop-link">
+        Continue Shopping
+      </a>
+    </div>
+  
+    <div *ngIf="cartItems.length > 0">
+      <div class="cart-item" *ngFor="let item of cartItems">
+        <img [src]="item.image" [alt]="item.name" />
+  
+        <div class="item-info">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.description }}</p>
+          <strong>₱{{ item.price }}</strong>
+        </div>
+  
+        <button (click)="removeItem(item)">
+          Remove
+        </button>
+      </div>
+  
+      <div class="cart-summary">
+        <h2>Total: ₱{{ total }}</h2>
+  
+        <a routerLink="/checkout" class="checkout-btn">
+          Proceed to Checkout
+        </a>
+      </div>
+    </div>
+  </section>
