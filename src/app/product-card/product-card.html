@@ -1,1 +1,21 @@
-<p>product-card works!</p>
+<div class="card">
+    <img
+      [src]="product.image"
+      [alt]="product.name"
+      class="product-image"
+    />
+  
+    <div class="card-content">
+      <h2>{{ product.name }}</h2>
+  
+      <p class="description">
+        {{ product.description }}
+      </p>
+  
+      <h3>₱{{ product.price }}</h3>
+  
+      <button (click)="addToCart()">
+        Add to Cart
+      </button>
+    </div>
+  </div>
